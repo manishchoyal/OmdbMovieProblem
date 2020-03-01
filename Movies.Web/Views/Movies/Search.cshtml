@@ -1,0 +1,17 @@
+﻿@model Movies.Service.Models.MovieList 
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Search</h1>
+
+<section class="movies" id="movies">
+    <h2>Featured Movies</h2>
+    <div class="row">
+        @foreach (var movie in Model.MovieResults)
+        {
+            <partial name="MovieResult" model="movie" />
+        }
+    </div>
+</section>
+
